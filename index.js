@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const register = require("./routes/register");
 const login = require("./routes/login");
-
+const path = require('path');
 
 const products = require('./products')
 const app = express();
@@ -42,8 +42,6 @@ app.listen(port, console.log(`server running on ${port}`))
 
 
 mongoose.connect(uri, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true
 }).then(() => console.log('Mongo db connection successful...'))
 .catch((err) => console.log('Mongo db connection failed...', err.message))
 

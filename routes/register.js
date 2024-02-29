@@ -38,4 +38,5 @@ router.post("/", async (req, res) => {
 	res.send(token)
 })
 
+console.log('Register page )))');
 module.exports = router
